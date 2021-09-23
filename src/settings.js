@@ -8,3 +8,4 @@ export const pguser = process.env.PG_USER;
 export const pgdb = process.env.PG_DATABASE;
 export const pgpswd = process.env.PG_PASSWORD;
 export const pgport = process.env.PG_PORT;
+export const dburi = process.env.DATABASE_URL;
