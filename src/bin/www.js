@@ -6,6 +6,7 @@
 
 import debug from 'debug';
 import http from 'http';
+import https from 'https';
 import app from '../app';
 
 /**
@@ -37,7 +38,7 @@ const port = normalizePort(process.env.PORT || '3000');
  * Create HTTP server.
  */
 
-const server = http.createServer(app);
+const server = http.createServer(app) || https.createServer(app);
 
 /**
  * Event listener for HTTP server "error" event.
