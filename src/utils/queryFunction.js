@@ -9,15 +9,11 @@ import {
 } from './queries';
 
 export const executeQueryArray = async (arr) => new Promise((resolve) => {
-    try {
-        const stop = arr.length;
-        arr.forEach(async (q, index) => {
-            await pool.query(q);
-            if (index + 1 === stop) resolve();
-        });
-    } catch (e) {
-        resolve(e);
-    }
+    const stop = arr.length;
+    arr.forEach(async (q, index) => {
+        await pool.query(q);
+        if (index + 1 === stop) resolve();
+    });
 });
 
 export const dropTables = () => executeQueryArray([ dropMessageTable, dropUserTable ]);
