@@ -10,4 +10,3 @@ export const pgpswd = process.env.PG_PASSWORD;
 export const pgport = process.env.PG_PORT;
 export const nodeEnv = process.env.NODE_ENV; */
 export const localConnectionString = process.env.CONNECTION_STRING;
-export const devConnectionString = process.env.DATABASE_URL;
