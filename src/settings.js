@@ -3,10 +3,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const testEnvironmentVariable = process.env.TEST_ENV_VARIABLE;
-/* export const pghost = process.env.PG_HOST;
-export const pguser = process.env.PG_USER;
-export const pgdb = process.env.PG_DATABASE;
-export const pgpswd = process.env.PG_PASSWORD;
-export const pgport = process.env.PG_PORT;
-export const nodeEnv = process.env.NODE_ENV; */
-export const localConnectionString = process.env.CONNECTION_STRING;
+export const pgHost = process.env.PGHOST;
+export const pgUser = process.env.PGUSER;
+export const pgDb = process.env.PGDATABASE;
+export const pgPswd = process.env.PGPASSWORD;
+export const pgPort = process.env.PGPORT;

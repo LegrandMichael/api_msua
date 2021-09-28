@@ -1,14 +1,13 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
 import {
-    localConnectionString
+    pgUser, pgPswd, pgHost, pgPort, pgDb
 } from '../settings';
+
+const connectionString = `postgresql://${pgUser}:${pgPswd}@${pgHost}:${pgPort}/${pgDb}`;
 
 dotenv.config();
 
 export const pool = new Pool({
-    connectionString: localConnectionString,
-    ssl: {
-        rejectUnauthorized: false,
-    }
+    connectionString
 });
